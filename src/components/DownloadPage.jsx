@@ -5,15 +5,15 @@ import styles from './DownloadPage.module.css'
 // ─── CONFIG — update these two lines when you ship a real release ───────────
 // GITHUB_REPO must be "owner/repo" exactly as it appears in your GitHub URL.
 // VERSION must match the tag pushed (without the "v" prefix).
-const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Studio'   // ← change this
-const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '2.4.1'
+const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'
+const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.0.0'
 const BUILD_DATE  = '20250412'
 
 // Builds the GitHub Releases asset download URL.
 // After `npm run build` on CI the files land at:
 //   https://github.com/OWNER/REPO/releases/download/vVERSION/FILENAME
 function assetUrl(filename) {
-  return `https://github.com/${GITHUB_REPO}/releases/download/v${VERSION}/${filename}`
+  return `https://github.com/${GITHUB_REPO}/releases/download/v1.0.0/${filename}`
 }
 
 // ─── Release matrix ─────────────────────────────────────────────────────────
@@ -30,26 +30,26 @@ const RELEASES = [
         label: 'x86-64 (64-bit)',
         arch: 'x64',
         ext: 'exe',
-        size: '78 MB',
+        size: '~90 MB',
         chip: 'Most modern PCs',
         recommended: true,
-        filename: `PromptFlow-Setup-${VERSION}-x64.exe`,
+        filename: 'PromptFlow-Setup-main-x64.exe',
       },
       {
         label: 'ARM64',
         arch: 'arm64',
         ext: 'exe',
-        size: '75 MB',
+        size: '89.7 MB',
         chip: 'Surface Pro X · Snapdragon',
-        filename: `PromptFlow-Setup-${VERSION}-arm64.exe`,
+        filename: 'PromptFlow-Setup-main-arm64.exe',
       },
       {
         label: 'x86 (32-bit)',
         arch: 'ia32',
         ext: 'exe',
-        size: '74 MB',
+        size: '77.7 MB',
         chip: 'Legacy systems',
-        filename: `PromptFlow-Setup-${VERSION}-ia32.exe`,
+        filename: 'PromptFlow-Setup-main-ia32.exe',
       },
     ],
   },
@@ -62,42 +62,42 @@ const RELEASES = [
         label: 'x86-64 AppImage',
         arch: 'x64',
         ext: 'AppImage',
-        size: '96 MB',
+        size: '119 MB',
         chip: 'Universal · No install needed',
         recommended: true,
-        filename: `PromptFlow-${VERSION}-x86_64.AppImage`,
+        filename: 'PromptFlow-main-amd64.AppImage',
       },
       {
         label: 'x86-64 .deb',
         arch: 'x64',
         ext: 'deb',
-        size: '88 MB',
+        size: '93.4 MB',
         chip: 'Debian · Ubuntu · Mint',
-        filename: `PromptFlow-${VERSION}-amd64.deb`,
+        filename: 'PromptFlow-main-amd64.deb',
       },
       {
         label: 'x86-64 .rpm',
         arch: 'x64',
         ext: 'rpm',
-        size: '89 MB',
+        size: '79.4 MB',
         chip: 'Fedora · RHEL · openSUSE',
-        filename: `PromptFlow-${VERSION}-x86_64.rpm`,
+        filename: 'PromptFlow-main-x86_64.rpm',
       },
       {
         label: 'ARM64 AppImage',
         arch: 'arm64',
         ext: 'AppImage',
-        size: '93 MB',
+        size: '119 MB',
         chip: 'Raspberry Pi 4/5 · Ampere',
-        filename: `PromptFlow-${VERSION}-arm64.AppImage`,
+        filename: 'PromptFlow-main-arm64.AppImage',
       },
       {
         label: 'ARM64 .deb',
         arch: 'arm64',
         ext: 'deb',
-        size: '85 MB',
+        size: '88.6 MB',
         chip: 'Raspberry Pi OS · Ubuntu ARM',
-        filename: `PromptFlow-${VERSION}-arm64.deb`,
+        filename: 'PromptFlow-main-arm64.deb',
       },
     ],
   },
@@ -106,14 +106,14 @@ const RELEASES = [
 // Checksums are written by CI into checksums.txt and mirrored here at release time.
 // You can also fetch checksums.txt dynamically — see the comment in DownloadPage below.
 const CHECKSUMS = [
-  { file: `PromptFlow-Setup-${VERSION}-x64.exe`,       sha: 'c2d4f8a176e30b591c…' },
-  { file: `PromptFlow-Setup-${VERSION}-arm64.exe`,     sha: 'd5b9e3c027f41a86d5…' },
-  { file: `PromptFlow-Setup-${VERSION}-ia32.exe`,      sha: 'e1c6d8b392a50f74e1…' },
-  { file: `PromptFlow-${VERSION}-x86_64.AppImage`,     sha: 'f4a2e7c081b93d65f4…' },
-  { file: `PromptFlow-${VERSION}-amd64.deb`,           sha: 'a7f3b1d592c04e28a7…' },
-  { file: `PromptFlow-${VERSION}-x86_64.rpm`,          sha: 'b0e8c4a613d75f91b0…' },
-  { file: `PromptFlow-${VERSION}-arm64.AppImage`,      sha: 'c3d9f2b047e81a54c3…' },
-  { file: `PromptFlow-${VERSION}-arm64.deb`,           sha: 'd6a0e5c128f94b37d6…' },
+  { file: 'PromptFlow-Setup-main-x64.exe',       sha: 'sha256:32662fdd37c669e9d153bde5885e9e6b0f43a085a76b781f41a587d5115037c7' },
+  { file: 'PromptFlow-Setup-main-arm64.exe',     sha: 'sha256:19ea1cb439d60a185868d55f3a6a7ccde3d89803d94a004cc500a92531ece61b' },
+  { file: 'PromptFlow-Setup-main-ia32.exe',      sha: 'sha256:fd9e354f54d322cca06d54e9fcc50679ebdfcf17cf941a62af1de5ac34c64a69' },
+  { file: 'PromptFlow-main-amd64.AppImage',      sha: 'sha256:d5863606d8836faff980fe7d24ed0551061dd81e5188b06f5932f6c91762ba9e' },
+  { file: 'PromptFlow-main-amd64.deb',           sha: 'sha256:6b9ca62a5c54305b5c5b5ff3c80a1939a2035935de09cfd8ca5f065df439bac7' },
+  { file: 'PromptFlow-main-x86_64.rpm',          sha: 'sha256:306d59936d05bb8a344a3500bb3433fc75890b40fb598f0d51ce8ece519a42da' },
+  { file: 'PromptFlow-main-arm64.AppImage',      sha: 'sha256:76fe21adf028ce62978b4936398adf89f7b8bf099ceb7c6817818a61a7011acd' },
+  { file: 'PromptFlow-main-arm64.deb',           sha: 'sha256:dff47df75e0509cc1c0a65cce911f252c04b32bea787a4ec5dab7eb7ea76a025' },
 ]
 
 // ─── DownloadCard ────────────────────────────────────────────────────────────
