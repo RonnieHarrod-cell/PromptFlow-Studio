@@ -1,0 +1,19 @@
+.field {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: twinkle var(--dur, 3s) ease-in-out var(--del, 0s) infinite;
+  opacity: var(--base-opacity, 0.4);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: var(--base-opacity, 0.4); transform: scale(1); }
+  50%       { opacity: calc(var(--base-opacity, 0.4) * 0.15); transform: scale(0.6); }
+}

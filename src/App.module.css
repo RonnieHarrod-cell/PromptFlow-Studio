@@ -1,0 +1,10 @@
+.root {
+  min-height: 100vh;
+  position: relative;
+  /* Subtle nebula corner gradient baked into the root */
+  background: radial-gradient(
+    circle at top right,
+    #1a0b2e 0%,
+    #050505 55%
+  );
+}

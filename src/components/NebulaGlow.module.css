@@ -1,0 +1,58 @@
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform, opacity;
+}
+
+.blob1 {
+  width: 720px;
+  height: 720px;
+  top: -20%;
+  right: -15%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.17) 0%,
+    rgba(109, 40, 217, 0.05) 45%,
+    transparent 70%
+  );
+  animation: drift1 9s ease-in-out infinite;
+}
+
+.blob2 {
+  width: 520px;
+  height: 520px;
+  bottom: 5%;
+  left: -12%;
+  background: radial-gradient(
+    circle,
+    rgba(236, 72, 153, 0.11) 0%,
+    rgba(139, 92, 246, 0.04) 40%,
+    transparent 65%
+  );
+  animation: drift2 13s ease-in-out infinite;
+}
+
+.blob3 {
+  width: 380px;
+  height: 380px;
+  top: 50%;
+  left: 35%;
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.07) 0%,
+    transparent 60%
+  );
+  animation: drift1 17s ease-in-out infinite reverse;
+}
+
+@keyframes drift1 {
+  0%, 100% { transform: scale(1) translate(0, 0);    opacity: 1;   }
+  50%       { transform: scale(1.09) translate(-12px, 8px); opacity: 0.7; }
+}
+
+@keyframes drift2 {
+  0%, 100% { transform: scale(1) translate(0, 0);    opacity: 1;   }
+  50%       { transform: scale(1.06) translate(10px, -12px); opacity: 0.75; }
+}
