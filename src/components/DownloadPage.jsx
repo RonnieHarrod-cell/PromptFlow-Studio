@@ -7,7 +7,7 @@ import styles from './DownloadPage.module.css'
 // VERSION must match the tag pushed (without the "v" prefix).
 const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Studio'   // ← change this
 const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '2.4.1'
-const BUILD_DATE  = '20250412'
+const BUILD_DATE  = '20260412'
 
 // Builds the GitHub Releases asset download URL.
 // After `npm run build` on CI the files land at:
