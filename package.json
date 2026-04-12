@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.0",
+    "electron": "^41.2.0",
+    "electron-builder": "^26.8.1",
     "vite": "^5.0.0"
   },
   "scripts": {

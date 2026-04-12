@@ -30,8 +30,7 @@ export default function Hero() {
           <span className={styles.arrow} aria-hidden="true">→</span>
         </button>
         <p className={styles.platformNote}>
-          Available for macOS, Windows &amp; Linux &nbsp;·&nbsp;
-          <strong>Optimized for M3/M4 Silicon</strong>
+          Available for Windows &amp; Linux
         </p>
       </div>
     </section>

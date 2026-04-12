@@ -293,6 +293,23 @@
   to   { transform: rotate(360deg); }
 }
 
+/* Direct link fallback */
+.directLink {
+  display: block;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: rgba(139, 92, 246, 0.4);
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+  margin-top: -6px;
+}
+
+.directLink:hover {
+  color: var(--lavender);
+}
+
 /* Checksums */
 .checksumSection {
   margin-top: 56px;
@@ -387,6 +404,24 @@
   color: rgba(139, 92, 246, 0.6);
   letter-spacing: 0.5px;
   white-space: nowrap;
+}
+
+.checksumFooter {
+  padding: 12px 22px;
+  border-top: 0.5px solid rgba(139, 92, 246, 0.08);
+  text-align: right;
+}
+
+.checksumDownload {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(139, 92, 246, 0.5);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.checksumDownload:hover {
+  color: var(--lavender);
 }
 
 /* Footer note */
