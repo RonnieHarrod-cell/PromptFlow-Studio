@@ -21,5 +21,5 @@ export default defineConfig({
   // If your GitHub Pages repo lives at https://your-org.github.io/promptflow-studio/
   // change base to '/promptflow-studio/'.
   // If you use a custom domain (e.g. promptflow.studio), keep it as '/'.
-  base: '/',
+  base: '/PromptFlow-Studio/',
 })
