@@ -5,9 +5,9 @@ import styles from './DownloadPage.module.css'
 // ─── CONFIG — update these two lines when you ship a real release ───────────
 // GITHUB_REPO must be "owner/repo" exactly as it appears in your GitHub URL.
 // VERSION must match the tag pushed (without the "v" prefix).
-const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'
+const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'   // ← change this
 const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.0.0'
-const BUILD_DATE  = '20250412'
+const BUILD_DATE  = '20260412'
 
 // Builds the GitHub Releases asset download URL.
 // After `npm run build` on CI the files land at:
