@@ -39,40 +39,7 @@ PromptFlow Studio is structured like a hybrid of:
 
 ---
 
-## 📁 Project Structure
-
-src/
-├── main.jsx
-├── App.jsx
-├── App.module.css
-├── index.css
-│
-└── components/
-├── Sidebar.jsx
-├── Editor.jsx
-├── Canvas.jsx
-├── ChatPanel.jsx
-├── VersionPanel.jsx
-├── VariablePanel.jsx
-├── StarField.jsx
-├── NebulaGlow.jsx
-└── Navbar.jsx
-
----
-
-## 🎨 Design System
-
-```css
---void: #050505; /* deep space background */
---violet: #8b5cf6; /* primary accent */
---magenta: #ec4899; /* secondary glow */
---starlight: #a1a1aa; /* muted text */
---lavender: #c4b5fd; /* highlights */
-
---font-display: "Syne";
---font-body: "DM Sans";
---font-mono: "DM Mono";
-```
+## 🎨 Design
 
 - 🌌 Visual Design Philosophy
 - 🌠 Procedural starfield background (140+ animated stars)
