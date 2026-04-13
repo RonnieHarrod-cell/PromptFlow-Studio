@@ -2,24 +2,14 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './DownloadPage.module.css'
 
-// ─── CONFIG — update these two lines when you ship a real release ───────────
-// GITHUB_REPO must be "owner/repo" exactly as it appears in your GitHub URL.
-// VERSION must match the tag pushed (without the "v" prefix).
-const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'   // ← change this
+const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'
 const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.0.0'
-const BUILD_DATE  = '20260412'
+const BUILD_DATE  = '13/04/2026'
 
-// Builds the GitHub Releases asset download URL.
-// After `npm run build` on CI the files land at:
-//   https://github.com/OWNER/REPO/releases/download/vVERSION/FILENAME
 function assetUrl(filename) {
   return `https://github.com/${GITHUB_REPO}/releases/download/v1.0.0/${filename}`
 }
 
-// ─── Release matrix ─────────────────────────────────────────────────────────
-// `filename` must match exactly what electron-builder outputs.
-// electron-builder's default pattern:  ${productName}-${version}-${arch}.${ext}
-// Adjust `productName` in your electron-builder config if it differs.
 const RELEASES = [
   {
     os: 'Windows',
@@ -103,8 +93,6 @@ const RELEASES = [
   },
 ]
 
-// Checksums are written by CI into checksums.txt and mirrored here at release time.
-// You can also fetch checksums.txt dynamically — see the comment in DownloadPage below.
 const CHECKSUMS = [
   { file: 'PromptFlow-Setup-main-x64.exe',       sha: 'sha256:32662fdd37c669e9d153bde5885e9e6b0f43a085a76b781f41a587d5115037c7' },
   { file: 'PromptFlow-Setup-main-arm64.exe',     sha: 'sha256:19ea1cb439d60a185868d55f3a6a7ccde3d89803d94a004cc500a92531ece61b' },
@@ -116,22 +104,19 @@ const CHECKSUMS = [
   { file: 'PromptFlow-main-arm64.deb',           sha: 'sha256:dff47df75e0509cc1c0a65cce911f252c04b32bea787a4ec5dab7eb7ea76a025' },
 ]
 
-// ─── DownloadCard ────────────────────────────────────────────────────────────
 function DownloadCard({ variant }) {
   const [state, setState] = useState('idle') // idle | go | done
   const url = assetUrl(variant.filename)
 
   function handleDownload() {
-    // Trigger the browser's native file download
     const a = document.createElement('a')
     a.href = url
-    a.download = variant.filename  // suggests a save-as filename to the browser
+    a.download = variant.filename 
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
 
     setState('go')
-    // Reset the button after a few seconds so the user can re-download
     setTimeout(() => setState('done'), 2000)
   }
 
@@ -152,7 +137,6 @@ function DownloadCard({ variant }) {
 
       <div className={styles.cardFilename}>{variant.filename}</div>
 
-      {/* Primary download button */}
       <button
         className={`${styles.dlBtn} ${state === 'go' ? styles.dlBtnLoading : ''} ${state === 'done' ? styles.dlBtnDone : ''}`}
         onClick={handleDownload}
@@ -164,7 +148,6 @@ function DownloadCard({ variant }) {
         {state === 'done' && <><CheckIcon /> Download started</>}
       </button>
 
-      {/* Direct link fallback — always visible so users can right-click → Save As */}
       <a
         href={url}
         className={styles.directLink}
@@ -177,7 +160,6 @@ function DownloadCard({ variant }) {
   )
 }
 
-// ─── Page ────────────────────────────────────────────────────────────────────
 export default function DownloadPage() {
   const navigate = useNavigate()
   const [showChecksums, setShowChecksums] = useState(false)
@@ -188,7 +170,6 @@ export default function DownloadPage() {
         ← Return to Mission Briefing
       </button>
 
-      {/* Hero */}
       <div className={styles.hero}>
         <div className={styles.eyebrow}>
           <span className={styles.ring} aria-hidden="true" />
@@ -203,7 +184,6 @@ export default function DownloadPage() {
         </p>
       </div>
 
-      {/* OS sections */}
       {RELEASES.map(rel => (
         <section key={rel.os} className={styles.osSection}>
           <div className={styles.osHeader}>
@@ -225,7 +205,6 @@ export default function DownloadPage() {
         </section>
       ))}
 
-      {/* Checksums */}
       <section className={styles.checksumSection}>
         <button
           className={styles.checksumToggle}
@@ -276,7 +255,6 @@ export default function DownloadPage() {
   )
 }
 
-/* ── Icon components ─────────────────────────────────────────────────────── */
 function DownloadIcon() {
   return (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
