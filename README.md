@@ -1,75 +1,104 @@
-# PromptFlow Studio — Landing Page
+# 🚀 PromptFlow Studio
 
-A cinematic, space-themed landing page built with **React + Vite + CSS Modules**.
+**A cinematic AI-powered IDE for building, testing, and collaborating on prompts, workflows, and AI agents in real time.**
 
-## Stack
+PromptFlow Studio is a next-generation prompt engineering workspace that blends **code editor UX, AI collaboration, and visual workflow design** into one unified environment.
 
-| Tool | Purpose |
-|------|---------|
-| React 18 | UI components |
-| Vite 5 | Dev server & bundler |
-| CSS Modules | Scoped, zero-dependency styling |
-| Google Fonts | Syne (display) + DM Mono + DM Sans |
+---
 
-## Quick Start
+## ✨ Features
 
-```bash
-npm install
-npm run dev
-```
+- 🧠 AI Flow Editor — Build and iterate prompt pipelines visually and in code
+- 👥 Teamwork Space — Real-time collaboration with shared chats and sessions
+- 🔁 Version Control for Prompts — Fork, compare, and restore flow versions
+- ⚡ Live Execution Engine — Run prompts instantly with streaming responses
+- 📦 Variable System — Dynamic inputs for reusable AI workflows
+- 📊 Activity Feed — Track AI runs, edits, and team actions in real time
 
-Open [http://localhost:5173](http://localhost:5173)
+---
 
-## Build for Production
+## 🧱 Tech Stack
 
-```bash
-npm run build
-npm run preview
-```
+| Layer        | Technology                            |
+| ------------ | ------------------------------------- |
+| Frontend     | React 18                              |
+| Build Tool   | Vite 5                                |
+| Styling      | CSS Modules                           |
+| Fonts        | Google Fonts (Syne, DM Sans, DM Mono) |
+| Architecture | Component-based modular UI            |
 
-## Project Structure
+---
 
-```
+## 🖥️ UI Overview
+
+PromptFlow Studio is structured like a hybrid of:
+
+- ⚙️ VS Code (flow editing + variables)
+- 💬 Discord (team collaboration spaces)
+- 🧠 Notion AI (AI-assisted workflow creation)
+
+---
+
+## 📁 Project Structure
+
 src/
-├── main.jsx                  # React entry point
-├── App.jsx                   # Root layout — assembles all sections
-├── App.module.css            # Root background (nebula gradient)
-├── index.css                 # Global resets + CSS design tokens
+├── main.jsx
+├── App.jsx
+├── App.module.css
+├── index.css
 │
 └── components/
-    ├── StarField.jsx/.css    # Procedural animated star field (fixed bg)
-    ├── NebulaGlow.jsx/.css   # Atmospheric violet/magenta blobs (fixed bg)
-    ├── Navbar.jsx/.css       # Sticky glass nav with scroll detection
-    ├── Hero.jsx/.css         # Hero headline, sub-copy, primary CTA
-    ├── ProductMockup.jsx/.css# Floating editor + live stream preview panel
-    ├── FeatureGrid.jsx/.css  # 4-card constellation feature grid
-    ├── StatsBar.jsx/.css     # Animated stat counters strip
-    ├── SocialProof.jsx/.css  # Auto-rotating quote carousel
-    └── CtaFooter.jsx/.css    # Final CTA + footer note
-```
+├── Sidebar.jsx
+├── Editor.jsx
+├── Canvas.jsx
+├── ChatPanel.jsx
+├── VersionPanel.jsx
+├── VariablePanel.jsx
+├── StarField.jsx
+├── NebulaGlow.jsx
+└── Navbar.jsx
 
-## Design Tokens (index.css)
+---
 
-All colours, fonts, and easing curves live as CSS custom properties on `:root`:
+## 🎨 Design System
 
 ```css
---void          #050505   /* deep space background */
---violet        #8B5CF6   /* electric violet accent */
---magenta       #ec4899   /* soft magenta glow */
---starlight     #A1A1AA   /* body text */
---lavender      #c4b5fd   /* highlight text */
+--void: #050505; /* deep space background */
+--violet: #8b5cf6; /* primary accent */
+--magenta: #ec4899; /* secondary glow */
+--starlight: #a1a1aa; /* muted text */
+--lavender: #c4b5fd; /* highlights */
 
---font-display  'Syne'       /* headlines */
---font-body     'DM Sans'    /* body copy */
---font-mono     'DM Mono'    /* code panels */
+--font-display: "Syne";
+--font-body: "DM Sans";
+--font-mono: "DM Mono";
 ```
 
-## Key Visual Techniques
+- 🌌 Visual Design Philosophy
+- 🌠 Procedural starfield background (140+ animated stars)
+- 🌌 Nebula glow layers using radial gradients
+- 🪟 Glassmorphism UI with backdrop blur
+- ⚡ Streaming AI response animations
+- ✨ Neon glow interaction system
 
-- **Starfield** — 140 `<span>` elements with randomised `opacity`, `size`, `animation-duration`, and `animation-delay` via CSS custom properties.  
-- **Nebula blobs** — `radial-gradient` fixed `div`s with a slow `scale + translate` keyframe loop.  
-- **Glass nav** — `backdrop-filter: blur(16px)` + semi-transparent background.  
-- **Mockup glow** — layered `box-shadow` on the editor frame with a breathing `scale` animation on the outer glow div.  
-- **Gradient text** — `background-clip: text` + `linear-gradient` on headline spans.  
-- **CTA glow button** — multi-layer `box-shadow` that expands on `:hover`.  
-- **Stream animation** — timed `setTimeout` chain replays every 6 s to simulate live token streaming.
+## ⚙️ Getting Started
+
+- Install dependencies
+- npm install
+- Run development server
+- npm run dev
+- Open:
+  http://localhost:5173
+
+## 🧠 Vision
+
+- PromptFlow Studio is being built as a new category of AI development tool:  
+  A collaborative AI operating environment for building, testing, and deploying prompt-based systems.
+- Future ideas:  
+  Multi-agent orchestration
+  Visual flow graphs
+  AI debugging tools
+  Plugin marketplace
+  Cloud workspace sync
+  🧪 Status
+  ⚠️ Active development — architecture evolving rapidly.
