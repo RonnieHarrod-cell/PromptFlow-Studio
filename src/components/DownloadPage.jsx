@@ -2,10 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './DownloadPage.module.css'
 
-// ─── CONFIG — update these two lines when you ship a real release ───────────
-// GITHUB_REPO must be "owner/repo" exactly as it appears in your GitHub URL.
-// VERSION must match the tag pushed (without the "v" prefix).
-const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'   // ← change this
+const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'
 const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.1.2'
 const BUILD_DATE  = '14/04/2026'
 
