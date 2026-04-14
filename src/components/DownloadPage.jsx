@@ -26,7 +26,7 @@ const RELEASES = [
         size: '101 MB',
         chip: 'Most modern PCs',
         recommended: true,
-        filename: `PromptFlow-Setup-${VERSION}-x64.exe`,
+        filename: `PromptFlow-${VERSION}-x64.exe`,
       },
       {
         label: 'ARM64',
@@ -34,7 +34,7 @@ const RELEASES = [
         ext: 'exe',
         size: '104 MB',
         chip: 'Surface Pro X · Snapdragon',
-        filename: `PromptFlow-Setup-${VERSION}-arm64.exe`,
+        filename: `PromptFlow-${VERSION}-arm64.exe`,
       },
       {
         label: 'x86 (32-bit)',
@@ -42,7 +42,7 @@ const RELEASES = [
         ext: 'exe',
         size: '92.1 MB',
         chip: 'Legacy systems',
-        filename: `PromptFlow-Setup-${VERSION}-ia32.exe`,
+        filename: `PromptFlow-${VERSION}-ia32.exe`,
       },
     ],
   },
