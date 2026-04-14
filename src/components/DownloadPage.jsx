@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './DownloadPage.module.css'
+import pkg from '../../package.json'
 
 const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'
-const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.1.2'
+const APP_VERSION_FALLBACK = pkg.version
+const envVersion  = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '')
+const VERSION     = (envVersion && /^\d/.test(envVersion)) ? envVersion : APP_VERSION_FALLBACK
 const BUILD_DATE  = '14/04/2026'
 
 function assetUrl(filename) {
