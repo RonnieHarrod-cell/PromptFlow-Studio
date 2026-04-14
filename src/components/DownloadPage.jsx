@@ -6,14 +6,14 @@ import styles from './DownloadPage.module.css'
 // GITHUB_REPO must be "owner/repo" exactly as it appears in your GitHub URL.
 // VERSION must match the tag pushed (without the "v" prefix).
 const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'   // ← change this
-const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.0.0'
-const BUILD_DATE  = '20260412'
+const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.1.1'
+const BUILD_DATE  = '14/04/2026'
 
 // Builds the GitHub Releases asset download URL.
 // After `npm run build` on CI the files land at:
 //   https://github.com/OWNER/REPO/releases/download/vVERSION/FILENAME
 function assetUrl(filename) {
-  return `https://github.com/${GITHUB_REPO}/releases/download/v1.0.0/${filename}`
+  return `https://github.com/${GITHUB_REPO}/releases/download/v${VERSION}/${filename}`
 }
 
 // ─── Release matrix ─────────────────────────────────────────────────────────
