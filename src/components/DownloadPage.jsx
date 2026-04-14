@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './DownloadPage.module.css'
 
-const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'
-const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.0.0'
-const BUILD_DATE  = '13/04/2026'
+// ─── CONFIG — update these two lines when you ship a real release ───────────
+// GITHUB_REPO must be "owner/repo" exactly as it appears in your GitHub URL.
+// VERSION must match the tag pushed (without the "v" prefix).
+const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'   // ← change this
+const VERSION     = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '') ?? '1.1.1'
+const BUILD_DATE  = '14/04/2026'
 
 function assetUrl(filename) {
-  return `https://github.com/${GITHUB_REPO}/releases/download/v1.0.0/${filename}`
+  return `https://github.com/${GITHUB_REPO}/releases/download/v${VERSION}/${filename}`
 }
 
 const RELEASES = [
