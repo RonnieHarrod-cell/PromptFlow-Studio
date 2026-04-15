@@ -7,7 +7,7 @@ const GITHUB_REPO = 'RonnieHarrod-cell/PromptFlow-Desktop'
 const APP_VERSION_FALLBACK = pkg.version
 const envVersion  = import.meta.env.VITE_APP_VERSION?.replace(/^v/, '')
 const VERSION     = (envVersion && /^\d/.test(envVersion)) ? envVersion : APP_VERSION_FALLBACK
-const BUILD_DATE  = '14/04/2026'
+const BUILD_DATE  = '15/04/2026'
 
 function assetUrl(filename) {
   return `https://github.com/${GITHUB_REPO}/releases/download/v${VERSION}/${filename}`
