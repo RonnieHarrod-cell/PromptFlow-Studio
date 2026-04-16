@@ -1,6 +1,6 @@
 {
   "name": "promptflow-studio",
-  "version": "1.2.3",
+  "version": "2.3.5",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
