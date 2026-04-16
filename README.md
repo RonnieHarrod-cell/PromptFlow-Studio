@@ -36,15 +36,6 @@ PromptFlow Studio is structured like a hybrid of:
 - ⚡ Streaming AI response animations
 - ✨ Neon glow interaction system
 
-## ⚙️ Getting Started
-
-- Install dependencies
-- npm install
-- Run development server
-- npm run dev
-- Open:
-  http://localhost:5173
-
 ## 🧠 Vision
 
 - PromptFlow Studio is being built as a new category of AI development tool:  
