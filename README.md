@@ -17,18 +17,6 @@ PromptFlow Studio is a next-generation prompt engineering workspace that blends 
 
 ---
 
-## 🧱 Tech Stack
-
-| Layer        | Technology                            |
-| ------------ | ------------------------------------- |
-| Frontend     | React 18                              |
-| Build Tool   | Vite 5                                |
-| Styling      | CSS Modules                           |
-| Fonts        | Google Fonts (Syne, DM Sans, DM Mono) |
-| Architecture | Component-based modular UI            |
-
----
-
 ## 🖥️ UI Overview
 
 PromptFlow Studio is structured like a hybrid of:
