@@ -297,52 +297,6 @@ export default function DownloadPage() {
         </a>
       </button>
 
-      <section className={styles.checksumSection}>
-        <button
-          className={styles.checksumToggle}
-          onClick={() => setShowChecksums((s) => !s)}
-          aria-expanded={showChecksums}
-        >
-          <span className={styles.checksumIcon} aria-hidden="true">
-            🔐
-          </span>
-          SHA-256 Checksums
-          <span
-            className={styles.chevron}
-            style={{
-              transform: showChecksums ? "rotate(180deg)" : "rotate(0deg)",
-            }}
-            aria-hidden="true"
-          >
-            ▾
-          </span>
-        </button>
-
-        {showChecksums && (
-          <div className={styles.checksumTable}>
-            <div className={styles.checksumHeader}>
-              <span>File</span>
-              <span>SHA-256</span>
-            </div>
-            {CHECKSUMS.map((c) => (
-              <div key={c.file} className={styles.checksumRow}>
-                <span className={styles.checksumFile}>{c.file}</span>
-                <code className={styles.checksumHash}>{c.sha}</code>
-              </div>
-            ))}
-            <div className={styles.checksumFooter}>
-              <a
-                href={assetUrl("checksums.txt")}
-                className={styles.checksumDownload}
-                download="checksums.txt"
-              >
-                ↓ Download full checksums.txt
-              </a>
-            </div>
-          </div>
-        )}
-      </section>
-
       <p className={styles.footerNote}>
         PromptFlow Studio is free forever for solo pilots.&nbsp;
         <span className={styles.footerAccent}>
